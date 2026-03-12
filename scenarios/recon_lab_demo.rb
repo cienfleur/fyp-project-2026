@@ -5,7 +5,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "attacker" do |attacker|
     attacker.vm.box = "uwbbi/bionic-arm64"
     attacker.vm.hostname = "attacker"
-    attacker.vm.network "private_network", ip: "192.168.56.10"
+    attacker.vm.network "private_network", ip: "192.168.56.19"
     attacker.vm.provider "vmware_desktop" do |v|
       v.vmx["memsize"] = "1024"
       v.vmx["numvcpus"] = "1"
@@ -17,7 +17,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "victim" do |victim|
     victim.vm.box = "uwbbi/bionic-arm64"
     victim.vm.hostname = "victim"
-    victim.vm.network "private_network", ip: "192.168.56.11"
+    victim.vm.network "private_network", ip: "192.168.56.20"
     victim.vm.provider "vmware_desktop" do |v|
       v.vmx["memsize"] = "1024"
       v.vmx["numvcpus"] = "1"
