@@ -1,5 +1,7 @@
 Vagrant.configure("2") do |config|
   config.ssh.insert_key = false
+  config.vm.boot_timeout = 600
+  config.vm.graceful_halt_timeout = 120
 
   # Attacker Machine
   config.vm.define "attacker" do |attacker|
@@ -10,7 +12,7 @@ Vagrant.configure("2") do |config|
       v.vmx["memsize"] = "1024"
       v.vmx["numvcpus"] = "1"
     end
-    attacker.vm.provision "shell", path: "provision/attacker.sh"
+    attacker.vm.provision "shell", path: "provision/basic_lab/attacker.sh"
   end
 
   # Victim Machine
@@ -22,7 +24,7 @@ Vagrant.configure("2") do |config|
       v.vmx["memsize"] = "1024"
       v.vmx["numvcpus"] = "1"
     end
-    victim.vm.provision "shell", path: "provision/victim.sh"
+    victim.vm.provision "shell", path: "provision/basic_lab/victim.sh"
   end
 
 end
