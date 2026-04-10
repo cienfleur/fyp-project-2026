@@ -33,7 +33,7 @@ GuppyLab is a system for automating the deployment of simulated cybersecurity la
 To start a pre-defined lab scenario (e.g., the 'recon_lab'):
 
 ```
-./start_lab.sh <scenario name>
+./start_lab.sh <scenario_name>
 ```
 
 This command will:
@@ -57,9 +57,11 @@ vagrant ssh victim
 
 To stop and remove all resources associated with a scenario:
 
-```bash
-vagrant destroy
 ```
+./finish_lab.sh <scenario_name>
+```
+
+NB: This command will not work without an argumnt, make sure that you include the scenario name just as if you were running `start_lab.sh`.
 
 ## Scenario Examples
 
@@ -84,7 +86,3 @@ To create a new lab scenario:
 Provisioning scripts (in the `provision/` directory) are executed inside the VMs after they are created.
 - `provision/<lab_name>/attacker.sh`: Sets up the attack machine.
 - `provision/<lab_name>/victim.sh`: Configures the victim machine with services and vulnerabilities to be tested.
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
