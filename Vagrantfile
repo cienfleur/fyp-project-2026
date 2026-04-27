@@ -1,2 +1,2 @@
-scenario = ENV['SCENARIO'] || "recon_lab"
+scenario = ENV['SCENARIO'] || "basic_lab"
 require_relative "scenarios/#{scenario}"
