@@ -15,8 +15,9 @@ GuppyLab is a system for automating the deployment of simulated cybersecurity la
 
 ### Prerequisites
 
-- **Vagrant**: Installed and configured.
-- **Virtualization Provider**: Support for VirtualBox (or VMware Desktop) as the provider.
+- **Vagrant**: This is the main provisioning framework in use. Can be downloaded from https://developer.hashicorp.com/vagrant/install
+
+- **Virtualization Provider**: This project uses VMWare for the default scripts, as such you will need VMWare to run the scenarios. Can be downloaded from https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 
 ### Installation
 
