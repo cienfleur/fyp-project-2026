@@ -53,6 +53,14 @@ vagrant ssh attacker
 vagrant ssh victim
 ```
 
+#### Guided Lesson
+
+Each scenario comes with a `lesson.txt` file that can be read to perform the task requested of the scenario. To access it, SSH into the attacker machine and read the file with the following command:
+```bash
+# read the lesson file
+cat lesson.txt
+```
+
 #### Cleaning Up
 
 To stop and remove all resources associated with a scenario:
