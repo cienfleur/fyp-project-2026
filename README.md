@@ -23,7 +23,7 @@ GuppyLab is a system for automating the deployment of simulated cybersecurity la
 
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/cienfleur/fyp-project-2026.git
    cd fyp-project-2026
    ```
 
@@ -31,7 +31,7 @@ GuppyLab is a system for automating the deployment of simulated cybersecurity la
 
 #### Deploy a Scenario
 
-To start a pre-defined lab scenario (e.g., the 'recon_lab'):
+To start a pre-defined lab scenario (e.g., 'basic_lab'):
 
 ```
 ./start_lab.sh <scenario_name>
